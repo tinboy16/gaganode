@@ -1,0 +1,18 @@
+# Sử dụng hình ảnh Linux cơ bản làm cơ sở
+FROM ubuntu:latest
+
+# Cài đặt các gói cần thiết
+RUN apt-get update && apt-get install -y curl
+
+# Thiết lập biến môi trường cho proxy
+ENV HTTP_PROXY=http://your-proxy-server:port
+ENV HTTPS_PROXY=http://your-proxy-server:port
+
+# Sao chép script vào container
+COPY script.sh /script.sh
+
+# Thiết lập quyền thực thi cho script
+RUN chmod +x /script.sh
+
+# Thực thi script khi khởi chạy container
+CMD ["/script.sh"]
