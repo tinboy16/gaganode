@@ -2,8 +2,7 @@
 FROM ubuntu:latest
 
 # Cài đặt các gói cần thiết
-RUN apt-get update && apt-get install -y curl
-
+RUN  apt-get update -y &&  apt-get -y install curl tar ca-certificates
 # Sao chép script vào container
 COPY script.sh /script.sh
 
