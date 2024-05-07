@@ -15,8 +15,8 @@ curl -o apphub-linux-amd64.tar.gz https://assets.coreservice.io/public/package/6
 # Check gaganode status is 'RUNNING'
 
 # Step 5: Pause for 15 seconds
-echo "Pausing for 15 seconds..."
-sleep 15
+echo "Pausing for 30 seconds..."
+sleep 30
 
 # Step 6: Set token
 ./apps/gaganode/gaganode config set --token=znkivdrssydfxcwcea3383c455384139
