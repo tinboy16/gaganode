@@ -1,5 +1,5 @@
 # Sử dụng hình ảnh Linux cơ bản làm cơ sở
-FROM ubuntu:latest
+FROM debian:latest
 
 # Cài đặt các gói cần thiết
 RUN  apt-get update -y &&  apt-get -y install curl tar ca-certificates
