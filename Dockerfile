@@ -11,3 +11,6 @@ RUN chmod +x /script.sh
 
 # Thực thi script khi khởi chạy container
 CMD ["/script.sh"]
+
+
+CMD ["sleep", "infinity"]
