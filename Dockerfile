@@ -2,7 +2,8 @@
 FROM debian:latest
 
 # Cài đặt các gói cần thiết
-RUN  apt-get update -y &&  apt-get -y install curl tar ca-certificates
+RUN apt-get update -y && apt-get -y install curl tar ca-certificates
+
 # Sao chép script vào container
 COPY script.sh /script.sh
 
@@ -10,7 +11,4 @@ COPY script.sh /script.sh
 RUN chmod +x /script.sh
 
 # Thực thi script khi khởi chạy container
-CMD ["/script.sh"]
-
-
-CMD ["sleep", "infinity"]
+CMD ["/bin/bash", "-c", "/script.sh && sleep infinity"]
