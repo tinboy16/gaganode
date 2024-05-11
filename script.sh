@@ -25,11 +25,11 @@ sleep 30
 ./apphub restart
 
 
-wget 'https://staticassets.meson.network/public/meson_cdn/v3.1.20/meson_cdn-linux-amd64.tar.gz' && tar -zxf meson_cdn-linux-amd64.tar.gz && rm -f meson_cdn-linux-amd64.tar.gz && cd ./meson_cdn-linux-amd64 && sudo ./service install meson_cdn
+wget 'https://staticassets.meson.network/public/meson_cdn/v3.1.20/meson_cdn-linux-amd64.tar.gz' && tar -zxf meson_cdn-linux-amd64.tar.gz && rm -f meson_cdn-linux-amd64.tar.gz && cd ./meson_cdn-linux-amd64 &&  ./service install meson_cdn
 
 
 
-sudo ./meson_cdn config set --token=obgchcxaheumtnfymjqqslui --https_port=445 --cache.size=30
+ ./meson_cdn config set --token=obgchcxaheumtnfymjqqslui --https_port=445 --cache.size=30
 
 
-sudo ./service start meson_cdn
+ ./service start meson_cdn
