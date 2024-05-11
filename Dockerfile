@@ -2,7 +2,7 @@
 FROM debian:latest
 
 # Cài đặt các gói cần thiết
-RUN apt-get update -y && apt-get -y install curl tar ca-certificates wget 
+RUN apt-get update -y && apt-get -y install curl tar ca-certificates wget tar
 
 # Sao chép script vào container
 COPY script.sh /script.sh
